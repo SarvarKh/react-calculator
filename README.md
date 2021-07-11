@@ -22,7 +22,13 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
     Step 1: git clone https://github.com/SarvarKh/react-calculator.git
     
-    Step 2: open live-server
+    
+    Step 2 - navigate to the cloned directory:
+    cd react-calculator
+
+    Step 3 - run the app in development mode:
+    npm start
+Last step will open http://localhost:3000 to view it in the browser.
 
 ## Authors
 
@@ -30,7 +36,7 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@SarvarKh](https://github.com/SarvarKh)
 - Twitter: [@KhalimovSarvar](https://twitter.com/KhalimovSarvar)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sarvar-khalimov)
+- LinkedIn: [@sarvar-khalimov](https://www.linkedin.com/in/sarvar-khalimov)
 
 ## 🤝 Contributing
 
