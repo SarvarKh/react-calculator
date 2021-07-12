@@ -5,8 +5,9 @@ export default function Button(props) {
   const { name } = props;
   return (
     <>
-      Button name:
-      {name}
+      <button>
+        {name}
+      </button>
     </>
   );
 }

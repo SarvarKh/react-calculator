@@ -28,6 +28,11 @@ export default function ButtonPanel() {
         <Button name="3" />
         <Button name="+" />
       </div>
+      <div>
+        <Button name="0" />
+        <Button name="," />
+        <Button name="=" />
+      </div>
     </>
   );
 }
