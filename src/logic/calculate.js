@@ -6,25 +6,14 @@ const calculate = (data, buttonName) => {
             total: total * (-1),
             next: next * (-1)
         }
-    } else if (buttonName == "+") {
+    } else if (buttonName == "AC") {
         return data = {
-            total: operate()
+            total: 0,
+            next: 0
         }
-    } else if (buttonName == "-") {
+    } else {
         return data = {
-            // Do something
-        }
-    } else if (buttonName == "X") {
-        return data = {
-            // Do something
-        }
-    } else if (buttonName == "÷") {
-        return data = {
-            // Do something
-        }
-    } else if (buttonName == "%") {
-        return data = {
-            // Do something
+            opera: operate(data.total, data.next, buttonName)
         }
     }
 }
