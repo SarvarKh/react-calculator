@@ -5,7 +5,6 @@ export default function Display(props) {
   const { result } = props;
   return (
     <>
-      Display panel - result:
       {result}
     </>
   );
