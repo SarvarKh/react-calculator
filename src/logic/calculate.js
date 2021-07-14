@@ -1,21 +1,22 @@
-/* eslint no-unused-vars: 0 */
 import operate from './operate';
 
 const calculate = (data, buttonName) => {
-  let { total, next, operation } = { ...data };
+  const newData = { ...data };
 
   if (buttonName === '+/-') {
-    total *= (-1);
-    next *= (-1);
+    newData.total *= (-1);
+    newData.next *= (-1);
   } else if (buttonName === 'AC') {
-    total = 0;
-    next = 0;
-    operation = 0;
+    newData.total = 0;
+    newData.next = 0;
+    newData.operation = 0;
   } else if (buttonName === '=') {
-    total = operate(total, next, operation);
-    next = '';
-    operation = null;
+    newData.total = operate(newData.total, newData.next, newData.operation);
+    newData.next = '';
+    newData.operation = null;
   }
+
+  return newData;
 };
 
 export default calculate;

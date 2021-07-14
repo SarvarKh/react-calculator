@@ -6,18 +6,18 @@ const operate = (numberOne, numberTwo, operation) => {
   let result;
 
   if (operation === '-') {
-    result = bigNumOne - bigNumTwo;
+    result = Big(bigNumOne.minus(bigNumTwo));
   } if (operation === '+') {
-    result = bigNumOne + bigNumTwo;
+    result = Big(bigNumOne.plus(bigNumTwo));
   } if (operation === 'X') {
-    result = bigNumOne * bigNumTwo;
+    result = Big(bigNumOne.times(bigNumTwo));
   } if (operation === '÷') {
-    result = bigNumOne / bigNumTwo;
+    result = Big(bigNumOne.div(bigNumTwo));
   } if (operation === '%') {
-    result = bigNumOne / 100;
+    result = Big(bigNumOne.mod(bigNumTwo));
   }
 
-  return result;
+  return result.c[0];
 };
 
 export default operate;
