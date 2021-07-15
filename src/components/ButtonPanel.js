@@ -2,36 +2,39 @@ import React from 'react';
 import Button from './Button';
 
 export default function ButtonPanel() {
+  function handleClick() {
+
+  }
   return (
     <>
       <div>
-        <Button name="AC" />
-        <Button name="+/-" />
-        <Button name="%" />
-        <Button name="÷" />
+        <Button name="AC" onClick={handleClick} />
+        <Button name="+/-" onClick={handleClick} />
+        <Button name="%" onClick={handleClick} />
+        <Button name="÷" onClick={handleClick} />
       </div>
       <div>
-        <Button name="7" />
-        <Button name="8" />
-        <Button name="9" />
-        <Button name="X" />
+        <Button name="7" onClick={handleClick} />
+        <Button name="8" onClick={handleClick} />
+        <Button name="9" onClick={handleClick} />
+        <Button name="X" onClick={handleClick} />
       </div>
       <div>
-        <Button name="4" />
-        <Button name="5" />
-        <Button name="6" />
-        <Button name="-" />
+        <Button name="4" onClick={handleClick} />
+        <Button name="5" onClick={handleClick} />
+        <Button name="6" onClick={handleClick} />
+        <Button name="-" onClick={handleClick} />
       </div>
       <div>
-        <Button name="1" />
-        <Button name="2" />
-        <Button name="3" />
-        <Button name="+" />
+        <Button name="1" onClick={handleClick} />
+        <Button name="2" onClick={handleClick} />
+        <Button name="3" onClick={handleClick} />
+        <Button name="+" onClick={handleClick} />
       </div>
       <div>
-        <Button name="0" />
-        <Button name="," />
-        <Button name="=" />
+        <Button name="0" onClick={handleClick} />
+        <Button name="," onClick={handleClick} />
+        <Button name="=" onClick={handleClick} />
       </div>
     </>
   );

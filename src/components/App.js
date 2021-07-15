@@ -3,18 +3,25 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 
-const myData = {
-  total: '5',
-  next: '3',
-  operation: '+',
-};
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+  }
 
-export default function App() {
-  calculate(myData, '=');
-  return (
-    <>
-      <Display />
-      <ButtonPanel />
-    </>
-  );
+  render() {
+    calculate(this.state, '=');
+    return (
+      <>
+        <Display />
+        <ButtonPanel />
+      </>
+    );
+  }
 }
+
+export default App;
