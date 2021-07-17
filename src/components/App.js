@@ -7,7 +7,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       // total: null,
-      next: null,
+      next: '0',
       // operation: null,
     };
 
@@ -15,9 +15,9 @@ class App extends React.Component {
   }
 
   handleState(newDigit) {
-    this.setState({
-      next: newDigit,
-    });
+    this.setState((prevState) => ({
+      next: prevState.next === '0' ? newDigit : prevState.next + newDigit,
+    }));
   }
 
   render() {
