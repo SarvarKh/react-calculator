@@ -7,15 +7,16 @@ class App extends React.Component {
     super(props);
     this.state = {
       // total: null,
-      // next: null,
+      next: null,
       // operation: null,
     };
   }
 
   render() {
+    const { next } = this.state;
     return (
       <>
-        <Display />
+        <Display status={next} />
         <ButtonPanel />
       </>
     );
