@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
+// import { checkPropTypes } from 'prop-types';
 import React from 'react';
 import Button from './Button';
 
-export default function ButtonPanel() {
+export default function ButtonPanel(props) {
+  const { grantParentHandleState } = props;
   return (
     <>
       <div>
@@ -12,7 +14,7 @@ export default function ButtonPanel() {
         <Button name="÷" />
       </div>
       <div>
-        <Button name="7" />
+        <Button name="7" parentHandleState={grantParentHandleState} />
         <Button name="8" />
         <Button name="9" />
         <Button name="X" />

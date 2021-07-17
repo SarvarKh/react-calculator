@@ -10,6 +10,14 @@ class App extends React.Component {
       next: null,
       // operation: null,
     };
+
+    this.handleState = this.handleState.bind(this);
+  }
+
+  handleState(newDigit) {
+    this.setState({
+      next: newDigit,
+    });
   }
 
   render() {
@@ -17,7 +25,7 @@ class App extends React.Component {
     return (
       <>
         <Display status={next} />
-        <ButtonPanel />
+        <ButtonPanel grantParentHandleState={this.handleState} />
       </>
     );
   }
