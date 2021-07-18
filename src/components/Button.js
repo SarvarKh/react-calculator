@@ -22,7 +22,7 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  parentHandleState: PropTypes.string,
+  parentHandleState: PropTypes.func,
 };
 
 Button.defaultProps = {
