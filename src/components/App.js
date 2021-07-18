@@ -18,7 +18,7 @@ class App extends React.Component {
 
   handleState(newDigit) {
     const dataObject = { ...this.state };
-    if (newDigit === 'AC' || newDigit === '+/-') {
+    if (newDigit === 'AC' || newDigit === '+/-' || newDigit === '%') {
       const calResult = calculate(dataObject, newDigit);
       this.setState(
         {
