@@ -17,6 +17,7 @@ class App extends React.Component {
   }
 
   handleState(newDigit) {
+    const numbers = /[0-9]/g;
     const dataObject = { ...this.state };
     if (newDigit === 'AC' || newDigit === '%') {
       const calResult = calculate(dataObject, newDigit);
@@ -46,14 +47,14 @@ class App extends React.Component {
           operation: calResult.operation,
         },
       );
-    } else if (newDigit === '=') {
+    } else if (newDigit === '=' && dataObject.next && dataObject.total) {
       const calResult = calculate(dataObject, newDigit);
       this.setState(
         {
           next: calResult.next,
         },
       );
-    } else {
+    } else if (newDigit.match(numbers)) {
       this.setState((prevState) => ({
         next: prevState.next === '0' ? newDigit : prevState.next + newDigit,
       }));
