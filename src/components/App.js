@@ -18,12 +18,19 @@ class App extends React.Component {
 
   handleState(newDigit) {
     const dataObject = { ...this.state };
-    if (newDigit === 'AC' || newDigit === '+/-' || newDigit === '%') {
+    if (newDigit === 'AC' || newDigit === '%') {
       const calResult = calculate(dataObject, newDigit);
       this.setState(
         {
           next: calResult.next,
           operation: null,
+        },
+      );
+    } else if (newDigit === '+/-') {
+      const calResult = calculate(dataObject, newDigit);
+      this.setState(
+        {
+          next: calResult.next,
         },
       );
     } else if (newDigit === '.') {

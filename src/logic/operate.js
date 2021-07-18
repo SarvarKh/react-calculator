@@ -6,6 +6,7 @@ const operate = (numberOne, numberTwo, operation) => {
   const bigNumTwo = new Big(numberTwo);
   let result;
 
+  console.log(numberOne, numberTwo, bigNumOne, bigNumTwo);
   if (operation === '-') {
     result = Big(bigNumOne.minus(bigNumTwo));
   } else if (operation === '+') {
