@@ -7,9 +7,9 @@ const calculate = (data, buttonName) => {
     newData.total *= (-1);
     newData.next *= (-1);
   } else if (buttonName === 'AC') {
-    newData.total = 0;
-    newData.next = 0;
-    newData.operation = 0;
+    newData.total = '0';
+    newData.next = '0';
+    newData.operation = '0';
   } else if (buttonName === '=') {
     newData.total = operate(newData.total, newData.next, newData.operation);
     newData.next = '';

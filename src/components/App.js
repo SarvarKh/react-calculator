@@ -1,6 +1,7 @@
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
+import calculate from '../logic/calculate';
 // import calculate from '../logic/calculate';
 
 class App extends React.Component {
@@ -16,10 +17,14 @@ class App extends React.Component {
   }
 
   handleState(newDigit) {
+    const dataObject = { ...this.state };
     if (newDigit === 'AC') {
-      this.setState({
-        next: '0',
-      });
+      const calResult = calculate(dataObject, newDigit);
+      this.setState(
+        {
+          next: calResult.next,
+        },
+      );
     } else {
       this.setState((prevState) => ({
         next: prevState.next === '0' ? newDigit : prevState.next + newDigit,
