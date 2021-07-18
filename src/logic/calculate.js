@@ -5,7 +5,7 @@ const calculate = (data, buttonName) => {
   const operations = ['+', '-', 'X', '÷'];
 
   if (buttonName === '+/-') {
-    newData.next = parseFloat(newData.next) * (-1);
+    newData.next = (parseFloat(newData.next) * (-1.0)).toString();
   } else if (buttonName === 'AC') {
     newData.next = '0';
   } else if (buttonName === '%') {
