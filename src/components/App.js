@@ -25,6 +25,10 @@ class App extends React.Component {
           next: calResult.next,
         },
       );
+    } else if (newDigit === ',') {
+      this.setState((prevState) => ({
+        next: prevState.next.includes(',') ? prevState.next : prevState.next + newDigit,
+      }));
     } else {
       this.setState((prevState) => ({
         next: prevState.next === '0' ? newDigit : prevState.next + newDigit,

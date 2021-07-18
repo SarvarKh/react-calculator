@@ -33,7 +33,7 @@ export default function ButtonPanel(props) {
       </div>
       <div>
         <Button name="0" parentHandleState={grantParentHandleState} />
-        <Button name="," />
+        <Button name="," parentHandleState={grantParentHandleState} />
         <Button name="=" />
       </div>
     </>
