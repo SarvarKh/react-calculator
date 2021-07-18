@@ -23,6 +23,7 @@ class App extends React.Component {
       this.setState(
         {
           next: calResult.next,
+          operation: null,
         },
       );
     } else if (newDigit === '.') {

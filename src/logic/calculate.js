@@ -10,7 +10,7 @@ const calculate = (data, buttonName) => {
     newData.next = '0';
   } else if (buttonName === '%') {
     newData.next /= 100;
-  } else if (operations.includes(buttonName) && !newData.total) {
+  } else if (operations.includes(buttonName)) {
     newData.total = newData.next;
     newData.next = '0';
     newData.operation = buttonName;
