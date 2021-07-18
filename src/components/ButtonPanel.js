@@ -29,12 +29,12 @@ export default function ButtonPanel(props) {
         <Button name="1" parentHandleState={grantParentHandleState} />
         <Button name="2" parentHandleState={grantParentHandleState} />
         <Button name="3" parentHandleState={grantParentHandleState} />
-        <Button name="+" />
+        <Button name="+" parentHandleState={grantParentHandleState} />
       </div>
       <div>
         <Button name="0" parentHandleState={grantParentHandleState} />
         <Button name="." parentHandleState={grantParentHandleState} />
-        <Button name="=" />
+        <Button name="=" parentHandleState={grantParentHandleState} />
       </div>
     </>
   );

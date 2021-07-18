@@ -8,9 +8,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // total: null,
+      total: null,
       next: '0',
-      // operation: null,
+      operation: null,
     };
 
     this.handleState = this.handleState.bind(this);
@@ -29,6 +29,22 @@ class App extends React.Component {
       this.setState((prevState) => ({
         next: prevState.next.includes('.') ? prevState.next : prevState.next + newDigit,
       }));
+    } else if (newDigit === '+' || newDigit === '-' || newDigit === 'X' || newDigit === '÷') {
+      const calResult = calculate(dataObject, newDigit);
+      this.setState(
+        {
+          next: calResult.next,
+          total: calResult.total,
+          operation: calResult.operation,
+        },
+      );
+    } else if (newDigit === '=') {
+      const calResult = calculate(dataObject, newDigit);
+      this.setState(
+        {
+          next: calResult.next,
+        },
+      );
     } else {
       this.setState((prevState) => ({
         next: prevState.next === '0' ? newDigit : prevState.next + newDigit,

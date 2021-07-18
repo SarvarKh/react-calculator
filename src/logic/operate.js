@@ -1,8 +1,9 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  const bigNumOne = numberOne !== null ? new Big(numberOne) : null;
-  const bigNumTwo = numberTwo !== null ? new Big(numberTwo) : null;
+  console.log(numberOne, numberTwo, operation);
+  const bigNumOne = new Big(numberOne);
+  const bigNumTwo = new Big(numberTwo);
   let result;
 
   if (operation === '-') {
@@ -15,7 +16,7 @@ const operate = (numberOne, numberTwo, operation) => {
     result = Big(bigNumOne.div(bigNumTwo));
   }
 
-  return result.c[0];
+  return result.toString();
 };
 
 export default operate;
