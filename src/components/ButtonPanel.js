@@ -9,7 +9,7 @@ export default function ButtonPanel(props) {
     <>
       <div>
         <Button name="AC" parentHandleState={grantParentHandleState} />
-        <Button name="+/-" />
+        <Button name="+/-" parentHandleState={grantParentHandleState} />
         <Button name="%" />
         <Button name="÷" />
       </div>
