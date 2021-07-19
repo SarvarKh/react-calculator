@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 export default function ButtonPanel(props) {
@@ -37,3 +38,11 @@ export default function ButtonPanel(props) {
     </>
   );
 }
+
+ButtonPanel.propTypes = {
+  grantParentHandleState: PropTypes.func,
+};
+
+ButtonPanel.defaultProps = {
+  grantParentHandleState: '0',
+};
