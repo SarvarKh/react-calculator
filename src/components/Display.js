@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Display(props) {
-  const { result } = props;
+  const { status } = props;
   return (
     <>
-      {result}
+      {status === null ? '0' : status}
     </>
   );
 }
 
 Display.propTypes = {
-  result: PropTypes.string,
+  status: PropTypes.string,
 };
 
 Display.defaultProps = {
-  result: '0',
+  status: '0',
 };

@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 export default function Button(props) {
   const { name } = props;
+  const { parentHandleState } = props;
   return (
     <>
-      <button type="button">
+      <button type="button" onClick={() => parentHandleState(name)}>
         {name}
       </button>
     </>
@@ -18,4 +19,12 @@ Button.propTypes = {
 
 Button.defaultProps = {
   name: '0',
+};
+
+Button.propTypes = {
+  parentHandleState: PropTypes.func,
+};
+
+Button.defaultProps = {
+  parentHandleState: '0',
 };
