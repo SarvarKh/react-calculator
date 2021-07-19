@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-// import { checkPropTypes } from 'prop-types';
 import React from 'react';
 import Button from './Button';
 
