@@ -1,8 +1,12 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  const bigNumOne = new Big(numberOne);
-  const bigNumTwo = new Big(numberTwo);
+  let bigNumOne;
+  let bigNumTwo;
+  if (operation !== '' && numberTwo !== '0') {
+    bigNumOne = new Big(numberOne);
+    bigNumTwo = new Big(numberTwo);
+  }
   let result;
 
   if (operation === '-') {
@@ -11,8 +15,10 @@ const operate = (numberOne, numberTwo, operation) => {
     result = Big(bigNumOne.plus(bigNumTwo));
   } else if (operation === 'X') {
     result = Big(bigNumOne.times(bigNumTwo));
-  } else if (operation === '÷') {
+  } else if (operation === '÷' && numberTwo !== '0') {
     result = Big(bigNumOne.div(bigNumTwo));
+  } else {
+    return result;
   }
 
   return result.toString();
