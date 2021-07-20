@@ -9,3 +9,8 @@
     align-items: center;
     font-size: 50px;
 }
+
+.row {
+    display: flex;
+    height: 100px;
+}
