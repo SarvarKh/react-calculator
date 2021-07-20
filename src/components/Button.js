@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 export default function Button(props) {
   const { name } = props;
   const { parentHandleState } = props;
+  const isBtn0 = name === '0' ? '202%' : '100%';
   return (
     <>
-      <button type="button" onClick={() => parentHandleState(name)}>
+      <button type="button" onClick={() => parentHandleState(name)} style={{ width: isBtn0 }}>
         {name}
       </button>
     </>
