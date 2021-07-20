@@ -1,0 +1,11 @@
+.display {
+    background-color: grey;
+    height: 100px;
+    font-weight: bold;
+    color: white;
+    padding: 2px 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-size: 50px;
+}
