@@ -7,17 +7,6 @@ export default function Button(props) {
   const { parentHandleState } = props;
   const operators = ['+', '-', '÷', 'X', '='];
   const getClass = (btn) => {
-    // switch (btn) {
-    //   case '0': {
-    //     return styles.btnZero;
-    //   }
-    //   case '+': {
-    //     return styles.btnOperators;
-    //   }
-    //   default: {
-    //     return null;
-    //   }
-    // }
     let result;
     if (btn === '0') {
       result = styles.btnZero;

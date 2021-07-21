@@ -17,16 +17,18 @@
 
 .btn {
     font-size: 30px;
+    width: 100px;
 }
 
 .btnOperators {
     background: orange;
     font-size: 30px;
     border: 1px solid black;
+    width: 100px;
 }
 
 .btnZero {
-    width: 202%;
+    width: 200px;
 }
 
 .navContainer {
