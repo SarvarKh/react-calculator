@@ -1,76 +1,76 @@
 .display {
-    background-color: grey;
-    height: 3rem;
-    font-weight: bold;
-    color: white;
-    padding: 1rem 0.5rem;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    font-size: 2.2rem;
+  background-color: grey;
+  height: 3rem;
+  font-weight: bold;
+  color: white;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  font-size: 2.2rem;
 }
 
 .row {
-    display: flex;
-    height: 3rem;
+  display: flex;
+  height: 3rem;
 }
 
 .btn {
-    font-size: 1.1rem;
-    width: 4rem;
+  font-size: 1.1rem;
+  width: 4rem;
 }
 
 .btnOperators {
-    background: orange;
-    font-size: 1.1rem;
-    border: 1px solid black;
-    width: 4rem;
+  background: orange;
+  font-size: 1.1rem;
+  border: 1px solid black;
+  width: 4rem;
 }
 
 .btnZero {
-    width: 8rem;
-    font-size: 1.1rem;
+  width: 8rem;
+  font-size: 1.1rem;
 }
 
 .navContainer {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
 .logo {
-    font-family: 'Caveat', cursive;
-    color: orange;
+  font-family: 'Caveat', cursive;
+  color: orange;
 }
 
 .main {
-    padding: 1rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .calculator {
-    width: 16rem;
+  width: 16rem;
 }
 
 .calContainer {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 4rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem 1rem 2rem;
 }
 
 .main h3 {
-    margin: 1rem 0 2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .main div {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 a {
-    margin-right: 1rem;
-    text-decoration: underline;
-    color: black;
+  margin-right: 1rem;
+  text-decoration: underline;
+  color: black;
 }
 
 a:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
