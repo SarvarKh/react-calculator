@@ -36,13 +36,13 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className={styles.calContainer}>
       <h3>Let&apos;s do some math!</h3>
       <div className={styles.calculator}>
         <Display status={next} />
         <ButtonPanel grantParentHandleState={handleState} />
       </div>
-    </>
+    </div>
   );
 };
 

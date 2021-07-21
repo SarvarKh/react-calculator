@@ -29,6 +29,7 @@
 
 .btnZero {
     width: 8rem;
+    font-size: 1.5rem;
 }
 
 .navContainer {
@@ -43,9 +44,23 @@
 }
 
 .main {
-    background: red;
+    padding: 1rem 2rem;
 }
 
 .calculator {
     width: 16rem;
+}
+
+.calContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem 1rem 2rem;
+}
+
+.main h3 {
+    margin: 1rem 0 2rem 0;
+}
+
+.main div {
+    margin: 1rem 0;
 }
