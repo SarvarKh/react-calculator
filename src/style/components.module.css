@@ -1,35 +1,35 @@
 .display {
     background-color: grey;
-    height: 4rem;
+    height: 3rem;
     font-weight: bold;
     color: white;
     padding: 1rem 0.5rem;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2.2rem;
 }
 
 .row {
     display: flex;
-    height: 4rem;
+    height: 3rem;
 }
 
 .btn {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     width: 4rem;
 }
 
 .btnOperators {
     background: orange;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     border: 1px solid black;
     width: 4rem;
 }
 
 .btnZero {
     width: 8rem;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .navContainer {
