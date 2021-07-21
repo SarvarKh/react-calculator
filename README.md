@@ -4,6 +4,12 @@
 
 > This is simple calculator app built with React.js
 
+<div align="center">
+  <img src="screenshots/general.png?raw=true" width="100%" height="auto"/>
+  <img src="screenshots/desktop_00.png?raw=true" width="45%" height="auto"/>
+  <img src="screenshots/desktop_01.png?raw=true" width="45%" height="auto"/>
+</div>
+
 ## Built With
 
 - React.js
