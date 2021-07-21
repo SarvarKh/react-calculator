@@ -3,7 +3,6 @@ import React from 'react';
 export default function Home() {
   return (
     <div>
-      <h1>Math Magicians</h1>
       <h3>Welcome to our page!</h3>
 
       <div>

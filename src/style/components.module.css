@@ -28,3 +28,13 @@
 .btnZero {
     width: 202%;
 }
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Caveat', cursive;
+    color: orange;
+}
