@@ -64,3 +64,13 @@
 .main div {
     margin: 1rem 0;
 }
+
+a {
+    margin-right: 1rem;
+    text-decoration: underline;
+    color: black;
+}
+
+a:hover {
+    opacity: 0.5;
+}
