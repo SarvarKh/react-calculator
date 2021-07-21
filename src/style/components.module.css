@@ -32,9 +32,18 @@
 .navContainer {
     display: flex;
     justify-content: space-between;
+    padding: 1rem 2rem;
 }
 
 .logo {
     font-family: 'Caveat', cursive;
     color: orange;
+}
+
+.main {
+    background: red;
+}
+
+.calculator {
+    width: 400px;
 }

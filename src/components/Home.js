@@ -1,8 +1,9 @@
 import React from 'react';
+import * as styles from '../style/components.module.css';
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.main}>
       <h3>Welcome to our page!</h3>
 
       <div>
