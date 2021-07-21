@@ -1,0 +1,82 @@
+.display {
+  background-color: grey;
+  height: 7rem;
+  font-weight: bold;
+  color: white;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.row {
+  display: flex;
+  height: 6rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  width: 10rem;
+}
+
+.btnOperators {
+  background: orange;
+  font-size: 1.1rem;
+  border: 1px solid black;
+  width: 10rem;
+}
+
+.btnZero {
+  width: 20rem;
+  font-size: 1.5rem;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.logo {
+  font-family: 'Caveat', cursive;
+  color: orange;
+}
+
+.main {
+  padding: 1rem 2rem;
+}
+
+.calculator {
+  width: 34rem;
+}
+
+.calContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem 1rem 2rem;
+  font-size: 3rem;
+}
+
+.main h3 {
+  margin: 1rem 0 2rem 0;
+  font-size: 4rem;
+}
+
+.main div {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+a {
+  margin-right: 1rem;
+  text-decoration: underline;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.5;
+}
