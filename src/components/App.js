@@ -36,6 +36,8 @@ const App = () => {
 
   return (
     <>
+      <h1>Math Magicians</h1>
+      <h3>Let&apos;s do some math!</h3>
       <Display status={next} />
       <ButtonPanel grantParentHandleState={handleState} />
     </>
