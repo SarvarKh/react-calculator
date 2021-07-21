@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
+import Navbar from './Navbar';
 
 const App = () => {
   const [total, setTotal] = useState(null);
@@ -36,6 +37,7 @@ const App = () => {
 
   return (
     <>
+      <Navbar />
       <Display status={next} />
       <ButtonPanel grantParentHandleState={handleState} />
     </>
