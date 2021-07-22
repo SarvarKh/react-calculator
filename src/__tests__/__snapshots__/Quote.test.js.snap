@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`renders correctly 1`] = `
-<div>
-  <div>
-    Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. –William Paul Thurston
-  </div>
-</div>
-`;
