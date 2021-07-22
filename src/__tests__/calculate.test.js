@@ -91,3 +91,101 @@ describe("Calculate methods: '%'", () => {
         expect(calculate(newObject, button)).toStrictEqual(result);
     });
 })
+
+describe("Calculate methods: operational '+, -, x, ÷'", () => {
+    test('Btn +: Keeps 1st number in total and waits for the second making it 0', () => {
+        const newObject = {
+            next: '71',
+            total: null,
+            operation: '+'
+        };
+        const button = '+';
+        const result = {
+            next: '0',
+            total: '71',
+            operation: '+'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Btn -: Keeps 1st and Cumulative numbers and waits for the 2nd making it 0', () => {
+        const newObject = {
+            next: '9',
+            total: '2',
+            operation: '-'
+        };
+        const button = '-';
+        const result = {
+            next: '0',
+            total: '9',
+            operation: '-'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Btn -: Keeps 1st and Cumulative numbers and waits for the 2nd making it 0 - negative case', () => {
+        const newObject = {
+            next: '-9',
+            total: '-2',
+            operation: '-'
+        };
+        const button = '-';
+        const result = {
+            next: '0',
+            total: '-9',
+            operation: '-'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Btn X: Keeps 1st and Cumulative numbers and waits for the 2nd making it 0', () => {
+        const newObject = {
+            next: '945',
+            total: '-0.232432423',
+            operation: 'X'
+        };
+        const button = 'X';
+        const result = {
+            next: '0',
+            total: '945',
+            operation: 'X'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Btn ÷: Keeps 1st and Cumulative numbers and waits for the 2nd making it 0', () => {
+        const newObject = {
+            next: '123456789',
+            total: '-5',
+            operation: '÷'
+        };
+        const button = '÷';
+        const result = {
+            next: '0',
+            total: '123456789',
+            operation: '÷'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Btn ÷: Keeps 1st and Cumulative negative decimals and waits for the 2nd making it 0', () => {
+        const newObject = {
+            next: '-0.123456789',
+            total: '0.54',
+            operation: '÷'
+        };
+        const button = '÷';
+        const result = {
+            next: '0',
+            total: '-0.123456789',
+            operation: '÷'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+})
