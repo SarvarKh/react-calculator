@@ -54,52 +54,40 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
     })
 })
 
-describe("Calculate methods: 'AC' and '+/-'", () => {
-    test('Turns object next value to 0 if btn is AC', () => {
+describe("Calculate methods: '%'", () => {
+    test('Returns parcentage of the integer onClick of %', () => {
         const newObject = {
-            next: '9',
-            total: '5',
-            operation: null
+            next: '56'
         };
-        const button = 'AC';
+        const button = '%';
         const result = {
-            next: '0',
-            total: '5',
-            operation: null
+            next: 0.56
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
     });
 
-    test('Turns the integer to opposite format +/-', () => {
+    test('Returns parcentage of the negatie integer onClick of %', () => {
         const newObject = {
-            next: '-3',
-            total: '15',
-            operation: null
+            next: '-25'
         };
-        const button = '+/-';
+        const button = '%';
         const result = {
-            next: '3',
-            total: '15',
-            operation: null
+            next: -0.25
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
-    })
+    });
 
-    test('Turns the decimal to opposite format +/-', () => {
+    test('Returns parcentage of the negatie decimal number onClick of %', () => {
         const newObject = {
-            next: '0.3',
-            total: '1',
-            operation: null
+            next: '-0.85'
         };
-        const button = '+/-';
+        const button = '%';
         const result = {
-            next: '-0.3',
-            total: '1',
-            operation: null
+            next: -0.0085
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
-    })
+    });
 })
