@@ -1,13 +1,13 @@
-import React from "react";
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
-import pretty from "pretty";
+import React from 'react';
+import { render, unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
+import pretty from 'pretty';
 
-import Quote from "../components/Quote";
+import Quote from '../components/Quote';
 
 let container = null;
 beforeEach(() => {
-  container = document.createElement("div");
+  container = document.createElement('div');
   document.body.appendChild(container);
 });
 
@@ -17,7 +17,7 @@ afterEach(() => {
   container = null;
 });
 
-it("should render a Quote", () => {
+it('should render a Quote', () => {
   act(() => {
     render(<Quote />, container);
   });
