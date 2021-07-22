@@ -17,8 +17,14 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
             total: '5',
             operation: null
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Turns the integer to opposite format +/-', () => {
@@ -33,8 +39,14 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
             total: '15',
             operation: null
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     })
 
     test('Turns the decimal to opposite format +/-', () => {
@@ -49,8 +61,14 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
             total: '1',
             operation: null
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     })
 })
 
@@ -63,8 +81,14 @@ describe("Calculate methods: '%'", () => {
         const result = {
             next: 0.56
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Returns parcentage of the negatie integer onClick of %', () => {
@@ -75,8 +99,14 @@ describe("Calculate methods: '%'", () => {
         const result = {
             next: -0.25
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Returns parcentage of the negatie decimal number onClick of %', () => {
@@ -87,8 +117,14 @@ describe("Calculate methods: '%'", () => {
         const result = {
             next: -0.0085
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 })
 
@@ -105,8 +141,14 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             total: '71',
             operation: '+'
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Btn -: Keeps 1st and Cumulative numbers and waits for the 2nd making it 0', () => {
@@ -121,8 +163,14 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             total: '9',
             operation: '-'
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Btn -: Keeps 1st and Cumulative numbers and waits for the 2nd making it 0 - negative case', () => {
@@ -137,8 +185,14 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             total: '-9',
             operation: '-'
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Btn X: Keeps 1st and Cumulative numbers and waits for the 2nd making it 0', () => {
@@ -153,8 +207,14 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             total: '945',
             operation: 'X'
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Btn ÷: Keeps 1st and Cumulative numbers and waits for the 2nd making it 0', () => {
@@ -169,8 +229,14 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             total: '123456789',
             operation: '÷'
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Btn ÷: Keeps 1st and Cumulative negative decimals and waits for the 2nd making it 0', () => {
@@ -185,8 +251,14 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             total: '-0.123456789',
             operation: '÷'
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 })
 
@@ -203,8 +275,14 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
             total: '5',
             operation: null
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Turns the integer to opposite format +/-', () => {
@@ -219,8 +297,14 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
             total: '15',
             operation: null
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     })
 
     test('Turns the decimal to opposite format +/-', () => {
@@ -235,12 +319,24 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
             total: '1',
             operation: null
         };
+        const wrongResult = {
+            next: '5',
+            total: '5',
+            operation: null
+        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     })
 })
 
 describe("Calculate methods: '='", () => {
+    const wrongResult = {
+        next: '5',
+        total: '5',
+        operation: null
+    };
+
     test('Adds 5 to 13', () => {
         const newObject = {
             next: '13',
@@ -255,6 +351,7 @@ describe("Calculate methods: '='", () => {
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Adds negative integer -5 to decimal 1.5', () => {
@@ -271,6 +368,7 @@ describe("Calculate methods: '='", () => {
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Subtract 25 from 525', () => {
@@ -287,6 +385,7 @@ describe("Calculate methods: '='", () => {
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
 
@@ -304,6 +403,7 @@ describe("Calculate methods: '='", () => {
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Multiply 6 to -3', () => {
@@ -320,6 +420,7 @@ describe("Calculate methods: '='", () => {
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Multiply -0.5 to -2.5', () => {
@@ -336,6 +437,7 @@ describe("Calculate methods: '='", () => {
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Divide 93 by 3', () => {
@@ -352,6 +454,7 @@ describe("Calculate methods: '='", () => {
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 
     test('Divide -9.3 by 3', () => {
@@ -368,5 +471,6 @@ describe("Calculate methods: '='", () => {
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
+        expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
     });
 })
