@@ -189,3 +189,184 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
         expect(calculate(newObject, button)).toStrictEqual(result);
     });
 })
+
+describe("Calculate methods: 'AC' and '+/-'", () => {
+    test('Turns object next value to 0 if btn is AC', () => {
+        const newObject = {
+            next: '9',
+            total: '5',
+            operation: null
+        };
+        const button = 'AC';
+        const result = {
+            next: '0',
+            total: '5',
+            operation: null
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Turns the integer to opposite format +/-', () => {
+        const newObject = {
+            next: '-3',
+            total: '15',
+            operation: null
+        };
+        const button = '+/-';
+        const result = {
+            next: '3',
+            total: '15',
+            operation: null
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    })
+
+    test('Turns the decimal to opposite format +/-', () => {
+        const newObject = {
+            next: '0.3',
+            total: '1',
+            operation: null
+        };
+        const button = '+/-';
+        const result = {
+            next: '-0.3',
+            total: '1',
+            operation: null
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    })
+})
+
+describe("Calculate methods: '='", () => {
+    test('Adds 5 to 13', () => {
+        const newObject = {
+            next: '13',
+            total: '5',
+            operation: '+'
+        };
+        const button = '=';
+        const result = {
+            next: '18',
+            total: '18',
+            operation: '+'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Adds negative integer -5 to decimal 1.5', () => {
+        const newObject = {
+            next: '-5',
+            total: '1.5',
+            operation: '+'
+        };
+        const button = '=';
+        const result = {
+            next: '-3.5',
+            total: '-3.5',
+            operation: '+'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Subtract 25 from 525', () => {
+        const newObject = {
+            next: '25',
+            total: '525',
+            operation: '-'
+        };
+        const button = '=';
+        const result = {
+            next: '500',
+            total: '500',
+            operation: '-'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+
+    test('Subtract 2.5 from -5.25', () => {
+        const newObject = {
+            next: '2.5',
+            total: '-5.25',
+            operation: '-'
+        };
+        const button = '=';
+        const result = {
+            next: '-7.75',
+            total: '-7.75',
+            operation: '-'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Multiply 6 to -3', () => {
+        const newObject = {
+            next: '-3',
+            total: '6',
+            operation: 'X'
+        };
+        const button = '=';
+        const result = {
+            next: '-18',
+            total: '-18',
+            operation: 'X'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Multiply -0.5 to -2.5', () => {
+        const newObject = {
+            next: '-2.5',
+            total: '-0.5',
+            operation: 'X'
+        };
+        const button = '=';
+        const result = {
+            next: '1.25',
+            total: '1.25',
+            operation: 'X'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Divide 93 by 3', () => {
+        const newObject = {
+            next: '3',
+            total: '93',
+            operation: '÷'
+        };
+        const button = '=';
+        const result = {
+            next: '31',
+            total: '31',
+            operation: '÷'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+
+    test('Divide -9.3 by 3', () => {
+        const newObject = {
+            next: '3',
+            total: '-9.3',
+            operation: '÷'
+        };
+        const button = '=';
+        const result = {
+            next: '-3.1',
+            total: '-3.1',
+            operation: '÷'
+        };
+    
+        expect(calculate(newObject, button)).toStrictEqual(result);
+    });
+})
