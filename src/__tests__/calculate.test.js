@@ -5,6 +5,12 @@
 import calculate from '../logic/calculate';
 
 describe("Calculate methods: 'AC' and '+/-'", () => {
+    const wrongResult = {
+        next: '5',
+        total: '5',
+        operation: null
+    };
+
     test('Turns object next value to 0 if btn is AC', () => {
         const newObject = {
             next: '9',
@@ -14,11 +20,6 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
         const button = 'AC';
         const result = {
             next: '0',
-            total: '5',
-            operation: null
-        };
-        const wrongResult = {
-            next: '5',
             total: '5',
             operation: null
         };
@@ -39,11 +40,6 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
             total: '15',
             operation: null
         };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
-        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
         expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
@@ -61,11 +57,6 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
             total: '1',
             operation: null
         };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
-        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
         expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
@@ -73,6 +64,12 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
 })
 
 describe("Calculate methods: '%'", () => {
+    const wrongResult = {
+        next: '5',
+        total: '5',
+        operation: null
+    };
+    
     test('Returns parcentage of the integer onClick of %', () => {
         const newObject = {
             next: '56'
@@ -80,11 +77,6 @@ describe("Calculate methods: '%'", () => {
         const button = '%';
         const result = {
             next: 0.56
-        };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
@@ -99,11 +91,6 @@ describe("Calculate methods: '%'", () => {
         const result = {
             next: -0.25
         };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
-        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
         expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
@@ -117,11 +104,6 @@ describe("Calculate methods: '%'", () => {
         const result = {
             next: -0.0085
         };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
-        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
         expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
@@ -129,6 +111,12 @@ describe("Calculate methods: '%'", () => {
 })
 
 describe("Calculate methods: operational '+, -, x, ÷'", () => {
+    const wrongResult = {
+        next: '5',
+        total: '5',
+        operation: null
+    };
+
     test('Btn +: Keeps 1st number in total and waits for the second making it 0', () => {
         const newObject = {
             next: '71',
@@ -140,11 +128,6 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             next: '0',
             total: '71',
             operation: '+'
-        };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
@@ -163,11 +146,6 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             total: '9',
             operation: '-'
         };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
-        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
         expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
@@ -184,11 +162,6 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             next: '0',
             total: '-9',
             operation: '-'
-        };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
@@ -207,11 +180,6 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             total: '945',
             operation: 'X'
         };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
-        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
         expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
@@ -228,11 +196,6 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             next: '0',
             total: '123456789',
             operation: '÷'
-        };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
         };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
@@ -251,11 +214,6 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
             total: '-0.123456789',
             operation: '÷'
         };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
-        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
         expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
@@ -263,6 +221,12 @@ describe("Calculate methods: operational '+, -, x, ÷'", () => {
 })
 
 describe("Calculate methods: 'AC' and '+/-'", () => {
+    const wrongResult = {
+        next: '5',
+        total: '5',
+        operation: null
+    };
+
     test('Turns object next value to 0 if btn is AC', () => {
         const newObject = {
             next: '9',
@@ -272,11 +236,6 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
         const button = 'AC';
         const result = {
             next: '0',
-            total: '5',
-            operation: null
-        };
-        const wrongResult = {
-            next: '5',
             total: '5',
             operation: null
         };
@@ -297,11 +256,6 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
             total: '15',
             operation: null
         };
-        const wrongResult = {
-            next: '5',
-            total: '5',
-            operation: null
-        };
     
         expect(calculate(newObject, button)).toStrictEqual(result);
         expect(calculate(newObject, button)).not.toStrictEqual(wrongResult);
@@ -317,11 +271,6 @@ describe("Calculate methods: 'AC' and '+/-'", () => {
         const result = {
             next: '-0.3',
             total: '1',
-            operation: null
-        };
-        const wrongResult = {
-            next: '5',
-            total: '5',
             operation: null
         };
     
