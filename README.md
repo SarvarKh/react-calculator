@@ -2,7 +2,7 @@
 
 # Raect Calculator
 
-> This is simple calculator app built with React.js
+> A calculator app built with React.js using React Hooks and Routers. App contains 3 pages with basic styling. Calculator operations as well as React components were tested with Jest and React Tesing Library.
 
 <div align="center">
   <img src="screenshots/general.png?raw=true" width="100%" height="auto"/>
